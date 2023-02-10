@@ -1,6 +1,5 @@
-import 'dart:html';
 
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 extension SizeExtensions on BuildContext{
   double get screenWidht => MediaQuery.of(this).size.width;
