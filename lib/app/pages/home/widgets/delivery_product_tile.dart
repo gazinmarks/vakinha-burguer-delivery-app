@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:dw9_delivery_app/app/core/extensions/formatter_extension.dart';
 import 'package:dw9_delivery_app/app/core/ui/styles/colors_app.dart';
 import 'package:dw9_delivery_app/app/core/ui/styles/text_styles.dart';
@@ -33,7 +31,8 @@ class DeliveryProductTile extends StatelessWidget {
                   padding: const EdgeInsets.only(bottom: 8.0),
                   child: Text(
                     product.description,
-                    style: context.textStyles.textRegular.copyWith(fontSize: 12),
+                    style:
+                        context.textStyles.textRegular.copyWith(fontSize: 12),
                   ),
                 ),
                 Padding(
