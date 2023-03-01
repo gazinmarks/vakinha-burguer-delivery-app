@@ -1,5 +1,6 @@
 import 'package:dw9_delivery_app/app/core/ui/styles/text_styles.dart';
 import 'package:dw9_delivery_app/app/core/widgets/delivery_appbar.dart';
+import 'package:dw9_delivery_app/app/core/widgets/delivery_button.dart';
 import 'package:dw9_delivery_app/app/dto/order_product_dto.dart';
 import 'package:dw9_delivery_app/app/models/product_model.dart';
 import 'package:dw9_delivery_app/app/pages/order/widget/order_field.dart';
@@ -106,6 +107,26 @@ class OrderPage extends StatelessWidget {
               ],
             ),
           ),
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                const Divider(
+                  color: Colors.grey,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: DeliveryButton(
+                    widht: double.infinity,
+                    height: 48,
+                    label: 'FINALIZAR',
+                    onPressed: () {},
+                  ),
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );

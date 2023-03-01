@@ -24,8 +24,8 @@ class OrderProductTile extends StatelessWidget {
           padding: const EdgeInsets.all(10.0),
           child: Image.network(
             'https://assets.unileversolutions.com/recipes-v2/106684.jpg?imwidth=800',
-            width: 100,
-            height: 100,
+            width: 90,
+            height: 90,
             fit: BoxFit.cover,
           ),
         ),
@@ -49,7 +49,7 @@ class OrderProductTile extends StatelessWidget {
                         color: context.colors.secondary,
                       ),
                     ),
-                    DeliveryIncrementDecrementButton(
+                    DeliveryIncrementDecrementButton.compact(
                       amout: 1,
                       incrementTap: () {},
                       decrementTap: () {},
