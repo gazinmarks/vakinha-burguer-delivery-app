@@ -28,10 +28,10 @@ class ProductModel {
   factory ProductModel.fromMap(Map<String, dynamic> map) {
     return ProductModel(
       id: map['id']?.toInt() ?? 0,
-      name: map['name'] as String,
-      description: map['description'] as String,
+      name: map['name'] ?? '',
+      description: map['description'] ?? '',
       price: map['price']?.toDouble() ?? 0.0,
-      image: map['image'] as String,
+      image: map['image'] ?? '',
     );
   }
 
