@@ -6,6 +6,9 @@ import 'package:dw9_delivery_app/app/core/widgets/delivery_increment_decrement_b
 import 'package:flutter/material.dart';
 
 import 'package:dw9_delivery_app/app/dto/order_product_dto.dart';
+import 'package:provider/provider.dart';
+
+import 'order_controller.dart';
 
 class OrderProductTile extends StatelessWidget {
   const OrderProductTile({
@@ -52,9 +55,13 @@ class OrderProductTile extends StatelessWidget {
                       ),
                     ),
                     DeliveryIncrementDecrementButton.compact(
-                      amout: 1,
-                      incrementTap: () {},
-                      decrementTap: () {},
+                      amout: orderProduct.amount,
+                      incrementTap: () {
+                        context.read<OrderController>().incrementProduct(index);
+                      },
+                      decrementTap: () {
+                        context.read<OrderController>().decrementProduct(index);
+                      },
                     ),
                   ],
                 ),
