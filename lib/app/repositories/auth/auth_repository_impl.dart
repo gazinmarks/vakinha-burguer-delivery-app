@@ -2,11 +2,10 @@
 import 'dart:developer';
 
 import 'package:dio/dio.dart';
-import 'package:dw9_delivery_app/app/core/custom_dio.dart';
+import 'package:dw9_delivery_app/app/core/rest_client/custom_dio.dart';
 import 'package:dw9_delivery_app/app/core/exceptions/repository_exception.dart';
 import 'package:dw9_delivery_app/app/core/exceptions/unauthorized_exception.dart';
 import 'package:dw9_delivery_app/app/models/auth_model.dart';
-import 'package:flutter/animation.dart';
 
 import './auth_repository.dart';
 
