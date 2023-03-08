@@ -18,7 +18,7 @@ class LoginController extends Cubit<LoginState> {
       final authModel = await _authRepository.login(email, password);
       final sp = await SharedPreferences.getInstance();
       sp.setString('accessToken', authModel.accessToken);
-      sp.setString('accessToken', authModel.refreshToken);
+      sp.setString('refreshToken', authModel.refreshToken);
       emit(state.copyWith(status: LoginStatus.success));
     } on UnauthorizedException catch (e, s) {
       log('Login ou senha inválidos', error: e, stackTrace: s);

@@ -26,7 +26,7 @@ class _OrderPageState extends BaseState<OrderPage, OrderController> {
   final formKey = GlobalKey<FormState>();
   final adressEC = TextEditingController();
   final documentEC = TextEditingController();
-  int? paymentTypeID;
+  int? paymentTypeId;
   final paymentTypeValid = ValueNotifier<bool>(true);
 
   @override
@@ -93,6 +93,13 @@ class _OrderPageState extends BaseState<OrderPage, OrderController> {
             showInfo(
                 'Sua sacola está vazia, adicione um produto para finalizar seu pedido ');
             Navigator.pop(context, <OrderProductDto>[]);
+          },
+          success: () {
+            hideLoader();
+            Navigator.of(context).popAndPushNamed(
+              '/order/completed',
+              result: <OrderProductDto>[],
+            );
           },
         );
       },
@@ -215,10 +222,10 @@ class _OrderPageState extends BaseState<OrderPage, OrderController> {
                               return PaymentTypesField(
                                 paymentTypes: paymentTypes,
                                 valueChanged: (value) {
-                                  paymentTypeID = value;
+                                  paymentTypeId = value;
                                 },
                                 valid: paymentTypeValidValue,
-                                valueSelected: paymentTypeID.toString(),
+                                valueSelected: paymentTypeId.toString(),
                               );
                             },
                           );
@@ -244,10 +251,14 @@ class _OrderPageState extends BaseState<OrderPage, OrderController> {
                           onPressed: () {
                             final valid =
                                 formKey.currentState?.validate() ?? false;
-                            final paymentTypeSelected = paymentTypeID != null;
+                            final paymentTypeSelected = paymentTypeId != null;
                             paymentTypeValid.value = paymentTypeSelected;
                             if (valid && paymentTypeSelected) {
-                              
+                              controller.saveOrder(
+                                address: adressEC.text,
+                                document: documentEC.text,
+                                paymentMethodId: paymentTypeId!,
+                              );
                             }
                           },
                         ),
