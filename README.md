@@ -21,5 +21,15 @@
 ![Captura de tela 2023-03-09 101127](https://user-images.githubusercontent.com/115508392/224042346-ce15dd6c-a911-4259-aba5-bd8eca5a546e.png)
 ![Captura de tela 2023-03-09 101152](https://user-images.githubusercontent.com/115508392/224042705-1683b899-6b4a-4cf0-bfdb-556c37e01d32.png)
 
+### Como usar:
+- Clone this repository:
+$ git clone https://github.com/gazinmarks/vakinha-burguer 
+- Enter in directory:
+$ cd vakinha-burguer
+- For install dependencies:
+$ flutter pub get
+- Run the app: 
+$ flutter run
+
 
 Projeto desenvolvido com apoio do Rodrigo Rahman na Academia do Flutter.
