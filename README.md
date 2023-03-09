@@ -23,7 +23,8 @@
 
 ### Como usar:
 - Clone this repository:
-$ git clone https://github.com/gazinmarks/vakinha-burguer 
+$ git clone https://github.com/gazinmarks/vakinha-burguer-delivery-app
+ 
 - Enter in directory:
 $ cd vakinha-burguer
 - For install dependencies:
