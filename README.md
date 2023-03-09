@@ -26,7 +26,7 @@
 $ git clone https://github.com/gazinmarks/vakinha-burguer-delivery-app
  
 - Enter in directory:
-$ cd vakinha-burguer
+$ cd vakinha-burguer-delivery-app
 - For install dependencies:
 $ flutter pub get
 - Run the app: 
